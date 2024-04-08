@@ -1,4 +1,4 @@
-import Adafruit_DHT
+'''import Adafruit_DHT
 import RPi.GPIO as GPIO
 import time
 
@@ -20,3 +20,24 @@ while True:
     print("MQ135 value: {0}".frmat(GPIO.input(MQ135_PIN)))
     
     time.sleep(3)
+'''
+
+import csv
+
+with open('data/2024/04/08.csv') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    line_count = 0
+    for row in csv_reader:
+        if line_count == 0:
+            print(f'Headers are {", ".join(row)}')
+            line_count += 1
+        else:
+            print(f'\tmq135: {row[0]}, mq7: {row[1]}, temp: {row[2]}, humi: {row[3]}')
+            line_count += 1
+    print(f'Processed {line_count} lines.')
+
+with open('data/2024/04/08.csv', mode='w', newline='') as csv_file:
+    writer = csv.writer(csv_file)
+    writer.writerow(['mq135', 'mq7', 'temp', 'humi'])
+    writer.writerow([12,13,14,15])
+    writer.writerow([14,10,15,15])
