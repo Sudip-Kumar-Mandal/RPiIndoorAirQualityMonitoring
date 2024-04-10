@@ -12,3 +12,15 @@
 -	Data stored on sd card and processed/analysed locally, no involvement of a cloud provider
 -	Does not require constant internet connection, notification scheduled in case of no internet connictivity
 -	User does not have to remember to open any app/dashboard, periodic notification containing the air quality summary is sent to user’s mobile
+
+### Connection:
+
+- MQ135, MQ7, DHT11 and other sensors are connected to Arduino UNO
+- Arduino UNO is connected to RPi using serial communication protocol over the USB cable
+
+### Scripts:
+
+- data_file_generation.py: receives data from Arudino UNO, creates file structure and writes data into the files
+- data_analysis.py: creates a separate file with analysis data once per day
+- telegram.py: sends telegram notifications
+- arduino.ino: collects data from sensors and sends to RPi
