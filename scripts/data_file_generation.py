@@ -2,7 +2,7 @@ from datetime import datetime
 import os
 import serial
 
-ser = serial.Serail('/dev/ttyACMO', 9600) #Opens a serial connection with the Arduino. You might need to identify the correct device name using ls /dev/tty* in the Raspberry Pi terminal. The name might be like /dev/ttyACM0.
+ser = serial.Serail('/dev/ttyUSB0', 9600) #Opens a serial connection with the Arduino. You might need to identify the correct device name using ls /dev/tty* in the Raspberry Pi terminal. The name might be like /dev/ttyACM0.
 
 while True:
     if ser.available():
