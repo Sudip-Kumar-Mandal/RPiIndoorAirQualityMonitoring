@@ -1,6 +1,6 @@
-#include <DHT.h>
+#include "DHT.h"
 
-const int dht_pin 7;
+const int dht_pin = 7;
 const int mq135_pin = 0;
 const int mq7_pin = 1;
 
@@ -12,6 +12,7 @@ float humi = 0.0f;
 
 void setup() {
     Serial.begin(9600);
+    dht.begin();
 }
 
 void loop() {
@@ -29,9 +30,9 @@ void loop() {
     Serial.print(humi);
     Serial.print(",");
     Serial.print(mq135_value);
-    Serial.print(",")
+    Serial.print(",");
     Serial.print(mq7_value);
-    Serial.println()
+    Serial.println();
 
-    delay(15000);
+    delay(10000);
 }

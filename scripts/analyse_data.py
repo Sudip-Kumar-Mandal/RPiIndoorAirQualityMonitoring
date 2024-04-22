@@ -1,7 +1,5 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-from telepot import Bot
-import telegram_secrets as tele
 
 pd.set_option('display.float_format', lambda x: '%.2f' % x)
 

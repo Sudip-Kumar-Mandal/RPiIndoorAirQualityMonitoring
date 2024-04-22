@@ -12,13 +12,15 @@
 -	Data stored on sd card and processed/analysed locally, no involvement of a cloud provider
 -	Does not require constant internet connection, notification scheduled in case of no internet connictivity
 -	User does not have to remember to open any app/dashboard, periodic notification containing the air quality summary is sent to user’s mobile
+api_key = "6955890484:AAF_VE-dFoTArmh3s8-ymp4MXeDQJ8LJZYQ"
+chat_id = "1224531480"
 
 ### Connection:
 
 - MQ135, MQ7, DHT11 and other sensors are connected to Arduino UNO
 - Arduino UNO is connected to RPi using serial communication protocol over the USB cable
 
-> Data format: {timestamp},{temperature},{humidity},{mq135},{mq7}
+**Data format**: `{timestamp},{temperature},{humidity},{mq135},{mq7}`
 
 ### Scripts:
 
