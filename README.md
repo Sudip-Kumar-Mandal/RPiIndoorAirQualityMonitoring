@@ -12,8 +12,6 @@
 -	Data stored on sd card and processed/analysed locally, no involvement of a cloud provider
 -	Does not require constant internet connection, notification scheduled in case of no internet connictivity
 -	User does not have to remember to open any app/dashboard, periodic notification containing the air quality summary is sent to user’s mobile
-api_key = "6955890484:AAF_VE-dFoTArmh3s8-ymp4MXeDQJ8LJZYQ"
-chat_id = "1224531480"
 
 ### Connection:
 
