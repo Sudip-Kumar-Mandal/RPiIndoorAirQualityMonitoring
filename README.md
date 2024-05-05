@@ -40,3 +40,9 @@
     - telepot
 - Arduino:
     - DHT.h
+
+### Scheduling scripts in cron in RPi
+
+- `crontab -e` or `sudo crontab -e`
+- {Minutes} {Hours} {Day of month} {Month} {Weekday} {Command}
+- e.g.: `30 10 * * 1-5 /home/pi/yourscript.py` will start yourscript.py on every weekday (from Monday till Friday) at 10:30 AM.

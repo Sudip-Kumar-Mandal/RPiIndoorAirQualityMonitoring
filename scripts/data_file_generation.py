@@ -5,7 +5,9 @@ import serial
 ser = serial.Serail('/dev/ttyUSB0', 9600) #Opens a serial connection with the Arduino. You might need to identify the correct device name using ls /dev/tty* in the Raspberry Pi terminal. The name might be like /dev/ttyACM0.
 
 while True:
-    if ser.available():
+    data = ser.readline().decode('utf-8')
+    
+    if(data):
 
         now = datetime.now()
 
